@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
+import ContactsIcon from '@material-ui/icons/Contacts';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
 import { Link, useLocation } from 'react-router-dom';
 import useStyles from './styles';
 import logo from "./logo.jpg";
@@ -26,6 +28,12 @@ const Navbar = ({ totalItems }) => {
             </IconButton>
           </div>
           )}
+            <IconButton component={Link} to="/Contacts" aria-label="Contacts" color="inherit">
+                <ContactsIcon/>
+            </IconButton>
+            <IconButton component={Link} to="/logIn" aria-label="Contacts" color="inherit">
+                <LockOpenIcon/>
+            </IconButton>
         </Toolbar>
       </AppBar>
     </>
